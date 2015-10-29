@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Prestige_Productsort>
+      <version>0.1.0</version>
+    </Prestige_Productsort>
+  </modules>
+  <global>
+    <helpers>
+      <productsort>
+        <class>Prestige_Productsort_Helper</class>
+      </productsort>
+    </helpers>
+  </global>
+  <frontend>
+    <events>
+        <catalog_product_collection_load_before>
+            <observers>
+                <prestige_productsort_catalog_product_collection_load_before>
+                    <type>singleton</type>
+                    <class>productsort/observer</class>
+                    <method>catalogProductCollectionLoadBefore</method>
+                </prestige_productsort_catalog_product_collection_load_before>
+            </observers>
+        </catalog_product_collection_load_before>
+    </events>
+</frontend>
+</config> 
